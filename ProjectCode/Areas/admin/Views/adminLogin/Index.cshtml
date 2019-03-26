@@ -20,7 +20,6 @@
         function preventBack() { window.history.forward(); }
         setTimeout("preventBack()", 0);
         window.onunload = function () { null };
-        alert("a");
     </script>
 </head>
 <body>
@@ -29,6 +28,12 @@
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">Log in</div>
                 <div class="panel-body">
+                    @if(TempData["Error"]!=null)
+                    {
+                        <div class="alert alert-danger">
+                            @TempData["Error"].ToString()
+                        </div>
+                    }
                     <form role="form" action="@Url.Action("Index","adminLogin")" method="post">
                         <fieldset>
                             <div class="form-group">

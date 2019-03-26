@@ -33,7 +33,6 @@ namespace ProjectCode.Models
         public System.DateTime DateOfBirth { get; set; }
         public bool IsBlocked { get; set; }
         public System.DateTime RegistrationDate { get; set; }
-        public string Role { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CartMaster> CartMasters { get; set; }

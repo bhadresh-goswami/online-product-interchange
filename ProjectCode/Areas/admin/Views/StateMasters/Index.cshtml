@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ProjectCode.Models.StateMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryMaster.CountryName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryMaster.CountryName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StateId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StateId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StateId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ProjectCode.Models.ProductMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsSecondHand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UploadedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desccription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsSold)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryMaster.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserMaster.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MyPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OriginalPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsSecondHand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UploadedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desccription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsSold)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryMaster.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserMaster.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
+        </td>
+    </tr>
+}
+
+</table>

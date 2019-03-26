@@ -1,0 +1,41 @@
+﻿@model ProjectCode.Models.ExpertSkillMaster
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/admin/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ExpertSkillMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryMaster.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryMaster.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpertMaster.ExpertName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpertMaster.ExpertName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a77e83c4a01e4c0299c07b470f32ad7e" Name="Diagram1">
+        <EntityTypeShape EntityType="dbOPIModel.AdminLoginMaster" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.CartMaster" Width="1.5" PointX="9.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.CategoryMaster" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.CityMaster" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.CountryMaster" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.ExpertMaster" Width="1.5" PointX="10.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.ExpertSkillMaster" Width="1.5" PointX="12.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.ProductMaster" Width="1.5" PointX="12.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.PurchaseMaster" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbOPIModel.StateMaster" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="dbOPIModel.FK__CartMaste__refPr__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbOPIModel.FK__ExpertSki__refCa__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="dbOPIModel.FK__ProductMa__refCa__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="dbOPIModel.FK__CityMaste__refSt__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="dbOPIModel.FK__PurchaseM__refCi__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="dbOPIModel.FK__StateMast__refCo__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="dbOPIModel.FK__ExpertSki__refEx__30F848ED" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbOPIModel.UserMaster" Width="1.5" PointX="7.5" PointY="6.5" />
+        <AssociationConnector Association="dbOPIModel.FK__CartMaste__refUs__35BCFE0A" />
+        <AssociationConnector Association="dbOPIModel.FK__UserMaste__refCi__22AA2996" />
+        <AssociationConnector Association="dbOPIModel.FK__ProductMa__Owner__286302EC" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

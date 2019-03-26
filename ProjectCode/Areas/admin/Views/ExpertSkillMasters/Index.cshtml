@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ProjectCode.Models.ExpertSkillMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryMaster.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpertMaster.ExpertName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryMaster.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpertMaster.ExpertName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExpertSkillId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExpertSkillId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExpertSkillId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,110 @@
+﻿@model ProjectCode.Models.ProductMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="bg0 p-t-23 p-b-140">
+
+    <div class="container">
+        <div class="p-b-10">
+            <br /><br /><br /><br /><br />
+            <h3 class="ltext-103 cl5">
+                Search Products
+            </h3>
+        </div>
+
+        <div class="flex-w flex-sb-m p-b-52">
+            <div>
+                <h4>Product Master</h4>
+                <hr />
+                <dl class="dl-horizontal">
+
+                    <dt>
+                        <img src="~/Content/user/ProductImage/@Model.ImageUrl" width="200px" />
+                    </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Title)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MyPrice)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MyPrice)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.OriginalPrice)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.OriginalPrice)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.IsSecondHand)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.IsSecondHand)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.UploadedDate)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UploadedDate)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Desccription)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Desccription)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.IsSold)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.IsSold)
+                    </dd>
+
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ImageUrl)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CategoryMaster.CategoryName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CategoryMaster.CategoryName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.UserMaster.UserName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UserMaster.UserName)
+                    </dd>
+
+                </dl>
+            </div>
+           
+        </div>
+    </div>
+</section>
